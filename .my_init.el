@@ -4,9 +4,7 @@
 (setq make-backup-files nil)
 (spacemacs/toggle-transparency)
 (find-file "d:/0-document/2-personal/org/ever_notes.org")
-(dolist (charset '(kana han cjk-misc bopomofo))
-  (set-fontset-font (frame-parameter nil 'font) charset
-                    (font-spec :family "微软雅黑" :size 17)))
+
 (setq org-startup-truncated nil)
 (setq default-truncate-lines nil)
 (setq truncate-lines nil)
@@ -36,7 +34,7 @@
   (fun/refile-to "d:/0-document/2-personal/org/ever_notes.org" "Dropbox")
   (org-mark-ring-goto))
 (defun fun/refile-to-task ()
-  "move current headline to dropbox"
+  "move current headline to tasks"
   (interactive)
   (org-mark-ring-push)
   (fun/refile-to "d:/0-document/2-personal/org/ever_notes.org" "Tasks")
